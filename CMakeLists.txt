@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.14)
+project(doodle)
+set(CMAKE_C_STANDARD 17)
+set(CMAKE_CXX_STANDARD 17)
+add_library(doodle STATIC doodle.cpp readers.cpp)
+add_executable(doodle_main main.cpp)
+target_link_libraries(doodle_main doodle)
